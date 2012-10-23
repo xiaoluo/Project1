@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+
+<hibernate-mapping>
+
+	<class name="com.xiaoluo.model.Vote" table="vote">
+	
+		<id name="id" column="id" type="int">
+			<generator class="increment"></generator>
+		</id>
+		
+		<property name="voteName" column="voteName" type="string"></property>
+		
+		<many-to-one name="channel" class="com.xiaoluo.model.Channel" column="channel_id" lazy="false">
+		</many-to-one>
+		
+		<set name="options" cascade="all" inverse="true" fetch="select" lazy="false" table="voteOption" order-by="id">
+			<key column="vote_id"></key>
+			<one-to-many class="com.xiaoluo.model.VoteOption"/>
+		</set>
+		
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<package name="vote_Pro" extends="jfreechart-default">
+	
+		<action name="loginAction" class="com.xiaoluo.action.LoginAction">
+			<result name="success">/admin.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		
+		<action name="addVoteAction" class="com.xiaoluo.action.AddVoteAction" method="saveChannel">
+			<result name="success">/addVote.jsp</result>
+		</action>
+		
+		<action name="showVoteResultAction" class="com.xiaoluo.action.ShowVoteResultAction">
+			<result name="success">/showVoteResult.jsp</result>
+		</action>
+		
+		<action name="deleteVoteAction" class="com.xiaoluo.action.DeleteVoteAction">
+			<result name="success">/showVoteResult.jsp</result>
+		</action>
+		
+		<action name="voteShowAction" class="com.xiaoluo.action.VoteShowAction">
+			<result name="success">/voteShow.jsp</result>
+		</action>
+		
+		<action name="doVoteAction" class="com.xiaoluo.action.DoVoteAction">
+			<result name="success">/doVote.jsp</result>
+		</action>
+		
+		<action name="accountVoteAction" class="com.xiaoluo.action.AccountVoteAction">
+			<result name="success">/displyVoteResult.jsp</result>
+		</action>
+		 
+	</package>
+	
+</struts>
