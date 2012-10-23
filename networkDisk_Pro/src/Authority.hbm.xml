@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+
+<hibernate-mapping>
+
+	<class name="com.xiaoluo.bean.Authority" table="authority">
+	
+		<id name="id" column="id" type="int">
+			<generator class="increment"></generator>
+		</id>
+		
+		<property name="authorityName" column="authorityName" type="string"></property>
+		<property name="level" column="level" type="int"></property>
+		<property name="password" column="password" type="string"></property>
+	
+	</class>
+
+</hibernate-mapping>

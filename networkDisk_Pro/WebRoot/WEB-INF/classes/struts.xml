@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+<package name="networkDisk" extends="struts-default">
+	
+		<action name="adminAction" class="adminAction">
+			<result name="success">/adminManager.jsp</result>
+			<result name="input">/adminLogin.jsp</result>
+		</action>
+	
+		<action name="uploadAction" class="uploadAction">
+			<result name="success" type="redirect">listAllUploadAction.action</result>
+		</action>
+	
+		<action name="listAllUploadAction" class="listAllUploadAction">
+			<result name="success">/listAllUpload.jsp</result>
+		</action>
+		
+		<action name="deleteUploadAction" class="deleteUploadAction">
+			<result name="success" type="redirect">listAllUploadAction.action</result>
+		</action>
+		
+		<action name="downloadAction" class="downloadAction">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${filename}</param>
+				<param name="inputName">downloadInputStream</param>
+			</result>
+		</action>
+	
+		<action name="userLoginAction" class="userLoginAction">
+			<result name="success" type="redirect">/userLogin.jsp</result>
+		</action>
+		
+		<action name="createImageAction" class="createImageAction">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="userShowUploadAction" class="userShowUploadAction">
+			<result name="success">/userDownload.jsp</result>
+		</action>
+
+		<action name="loginValidateAction" class="loginValidateAction">
+			<result name="success" type="redirect">userShowUploadAction.action</result>
+			<result name="input">/userLogin.jsp</result>
+			<result name="error">/userLogin.jsp</result>
+		</action>
+
+		<action name="listAuthorityAction" class="listAuthorityAction">
+			<result name="success">/listAllRegisterUser.jsp</result>
+		</action>
+		
+		<action name="getSingleRegisterUserAction" class="getSingleRegisterUserAction">
+			<result name="success">/getSingleRegisterUser.jsp</result>
+		</action>
+		
+		<action name="deleteRegisterUserAction" class="deleteRegisterUserAction">
+			<result name="success" type="redirect">listAuthorityAction.action</result>
+		</action>
+
+	</package>
+	
+</struts>

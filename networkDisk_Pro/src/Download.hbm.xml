@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+
+<hibernate-mapping>
+
+	<class name="com.xiaoluo.bean.Download" table="download">
+	
+		<id name="id" column="id" type="int">
+			<generator class="foreign">
+				<param name="property">upload</param>
+			</generator>
+		</id>
+		
+		<property name="fileFileName" column="fileFileName" type="string"></property>
+		<property name="downloadCount" column="downloadCount" type="int"></property>
+		
+		<one-to-one name="upload" class="com.xiaoluo.bean.Upload"></one-to-one>
+	
+	</class>
+
+</hibernate-mapping>
