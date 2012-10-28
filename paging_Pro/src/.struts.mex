@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="page2" location="0,0" size="0,0" />
+  <webResource name="result.jsp" path="/result.jsp" location="1235,395" size="150,55" />
+  <webResource name="output.jsp" path="/output.jsp" location="1235,570" size="150,55" />
+  <webResource name="output2.jsp" path="/output2.jsp" location="1235,745" size="150,55" />
+  <webResource name="registerResult.jsp" path="/registerResult.jsp" location="975,1095" size="150,55" />
+  <webResource name="register.jsp" path="/register.jsp" location="1235,920" size="150,55" />
+  <webResource name="logout.jsp" path="/logout.jsp" location="10,920" size="150,55" />
+  <webResource name="login2.jsp" path="/login2.jsp" location="255,1095" size="150,55" />
+  <webResource name="action2.jsp" path="/action2.jsp" location="10,465" size="150,55" />
+  <webResource name="tokenSuccess.jsp" path="/tokenSuccess.jsp" location="241,10" size="150,55" />
+  <webResource name="tokenFail.jsp" path="/tokenFail.jsp" location="9,290" size="150,55" />
+  <webResource name="fileUploadResult.jsp" path="/fileUploadResult.jsp" location="478,10" size="150,55" />
+  <webResource name="fileUploadResult2.jsp" path="/fileUploadResult2.jsp" location="719,10" size="150,55" />
+  <webResource name="output.jsp" path="output.jsp" location="115,1480" size="150,55" />
+</Struts2Diagram>
+
