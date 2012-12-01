@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    
+    	<class name="com.xiaoluo.bean.UserAccount" table="userAccount">
+    		
+    		<id name="id" column="id" type="int">
+    			<generator class="foreign">
+    				<param name="property">user</param>
+    			</generator>
+    		</id>
+    		
+    		<property name="bankCard" column="bankCard" type="string"></property>
+    		<property name="remaning" column="remaning" type="string"></property>
+    		<property name="accountType" column="accountType" type="string"></property>
+    		<property name="passwordErrorCount" column="passwordErrorCount" type="int"></property>
+    		<property name="withdrawingMoneyCount" column="withdrawingMoneyCount" type="int"></property>
+    		
+    		<one-to-one name="user" class="com.xiaoluo.bean.User"></one-to-one>
+    		
+    		<set name="historyTrades" cascade="all" fetch="select" lazy="false" inverse="true" order-by="id asc">
+    			<key column="userAccount_id"></key>
+    			<one-to-many class="com.xiaoluo.bean.HistoryTrade"/>
+    		</set>
+    		
+    	</class>
+    
+    </hibernate-mapping>
