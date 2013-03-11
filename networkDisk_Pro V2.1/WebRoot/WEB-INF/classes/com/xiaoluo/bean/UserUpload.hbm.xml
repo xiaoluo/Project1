@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "dtd/hibernate-mapping-3.0.dtd">
+    
+
+<hibernate-mapping>
+
+	<class name="com.xiaoluo.bean.UserUpload" table="userupload">
+	
+		<id name="id" column="id" type="int">
+			<generator class="increment"></generator>
+		</id>
+		
+		<property name="fileFileName" column="fileFileName" type="string"></property>
+		<property name="fileLength" column="fileLength" type="int"></property>
+		<property name="fileUploadDate" column="fileUploadDate" type="date"></property>
+		<property name="isAudit" column="isAudit" type="int"></property>
+		
+		<many-to-one name="authority" class="com.xiaoluo.bean.Authority" column="authority_id" lazy="false">
+		</many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

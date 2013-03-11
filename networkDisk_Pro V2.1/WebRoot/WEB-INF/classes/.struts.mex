@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="networkDisk" location="0,0" size="0,0">
+    <action name="adminAction" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="adminManager.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="adminLogin.jsp" />
+      </result>
+    </action>
+    <action name="uploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="listAllUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="deleteUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="downloadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="userLoginAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="createImageAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="userShowUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="loginValidateAction" location="0,0" size="0,0">
+      <result name="success" />
+      <result name="input" />
+      <result name="error" />
+    </action>
+    <action name="listAuthorityAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="getSingleRegisterUserAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="deleteRegisterUserAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="userUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="listUserUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="auditUserUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="updateUserUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="downloadUserUploadAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="result.jsp" path="/result.jsp" location="1235,395" size="150,55" />
+  <webResource name="output.jsp" path="/output.jsp" location="1235,570" size="150,55" />
+  <webResource name="output2.jsp" path="/output2.jsp" location="1235,745" size="150,55" />
+  <webResource name="registerResult.jsp" path="/registerResult.jsp" location="975,1095" size="150,55" />
+  <webResource name="register.jsp" path="/register.jsp" location="1235,920" size="150,55" />
+  <webResource name="logout.jsp" path="/logout.jsp" location="10,920" size="150,55" />
+  <webResource name="login2.jsp" path="/login2.jsp" location="255,1095" size="150,55" />
+  <webResource name="action2.jsp" path="/action2.jsp" location="10,465" size="150,55" />
+  <webResource name="tokenSuccess.jsp" path="/tokenSuccess.jsp" location="241,10" size="150,55" />
+  <webResource name="tokenFail.jsp" path="/tokenFail.jsp" location="9,290" size="150,55" />
+  <webResource name="fileUploadResult.jsp" path="/fileUploadResult.jsp" location="478,10" size="150,55" />
+  <webResource name="fileUploadResult2.jsp" path="/fileUploadResult2.jsp" location="719,10" size="150,55" />
+  <webResource name="output.jsp" path="output.jsp" location="115,1480" size="150,55" />
+  <webResource name="adminManager.jsp" path="/adminManager.jsp" location="0,0" size="0,0" />
+  <webResource name="adminLogin.jsp" path="/adminLogin.jsp" location="0,0" size="0,0" />
+  <webResource name="index.jsp" path="/index.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

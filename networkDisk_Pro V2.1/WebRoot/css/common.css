@@ -1,0 +1,72 @@
+#font1{
+	color: #00508B;
+	font-weight: bold;
+}
+
+/*立即注册按钮*/
+.button1{
+    background-color:   #ffffff;
+   	cursor:hand;
+	width:   86px;
+	height:   26px;
+   	background-image:   url(/networkDisk_Pro/images/register.jpg);
+   	background-repeat:   no-repeat;
+   	background-position:   center;
+   	text-align:   center;
+   	border:  none;
+   /*
+    font-size:12px;
+    background-attachment:   scroll;
+   */
+}
+
+.button2{
+    background-color:   #ffffff;
+   	cursor:hand;
+	width:   86px;
+	height:   26px;
+   	background-repeat:   no-repeat;
+   	background-position:   center;
+   	background-color: #abcdef;
+   	text-align:   center;
+   	border:  none;
+}
+
+.button3{
+	background-color:   #ffffff;
+   	cursor:hand;
+	width:   150px;
+	height:   26px;
+   	background-repeat:   no-repeat;
+   	background-position:   center;
+   	background-color: #abcdef;
+   	text-align:   center;
+   	border:  none;
+}
+
+
+/*对连接的一般处理方法*/
+a.anavi:link,a.anavi:visited,a.anavi:hover,a.anavi:active{
+	color:#C3CDDF;
+	text-decoration: none;
+}
+
+#body{
+	background-color:#d1e6f7;
+	margin: 0px; padding: 4px;
+}
+
+.table1{
+	color: #0046a6;
+	background-color: #d2e8ff;
+	font-family: Arial;
+}
+
+.table1 th,td{
+	color: #003e7e;
+	background-color: #7bb3ff
+}
+
+.table1 tr.altrow{
+	background-color: #c7e5ff;
+}

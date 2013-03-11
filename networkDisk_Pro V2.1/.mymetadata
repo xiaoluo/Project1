@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="networkDisk_Pro"
+  id="myeclipse.1350743078031"
+  context-root="/networkDisk_Pro"
+  j2ee-spec="5.0"
+  archive="networkDisk_Pro.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/networkdisk2</value>
+		</property>
+		
+		<property name="username">
+			<value>root</value>
+		</property>
+		
+		<property name="password">
+			<value>123</value>
+		</property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource"/>
+		</property>
+		
+		<property name="mappingResources">
+			<list>
+				<value>com/xiaoluo/bean/Authority.hbm.xml</value>
+				<value>com/xiaoluo/bean/Upload.hbm.xml</value>
+				<value>com/xiaoluo/bean/Download.hbm.xml</value>
+				<value>com/xiaoluo/bean/UserUpload.hbm.xml</value>
+			</list>
+		</property>
+		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="fileUploadDAO" class="com.xiaoluo.dao.impl.FileUploadDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="authorityDAO" class="com.xiaoluo.dao.impl.AuthorityDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="userUploadDAO" class="com.xiaoluo.dao.impl.UserUploadDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+
+	<bean id="fileUploadServiceTarget" class="com.xiaoluo.service.impl.FileUploadServiceImpl">
+		<property name="fileUploadDAO">
+			<ref local="fileUploadDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="authorityServiceTarget" class="com.xiaoluo.service.impl.AuthorityServiceImpl">
+		<property name="authorityDAO">
+			<ref local="authorityDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="userUploadServiceTarget" class="com.xiaoluo.service.impl.UserUploadServiceImpl">
+		<property name="userUploadDAO">
+			<ref local="userUploadDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="fileUploadService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="fileUploadServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="authorityService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="authorityServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="userUploadService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="userUploadServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="adminAction" class="com.xiaoluo.action.AdminAction" scope="prototype"></bean>
+	
+	<bean id="uploadAction" class="com.xiaoluo.action.UploadAction" scope="prototype">
+		<property name="fileUploadService">
+			<ref local="fileUploadService"/>
+		</property>
+	</bean>
+
+	<bean id="listAllUploadAction" class="com.xiaoluo.action.ListAllUploadAction" scope="prototype">
+		<property name="fileUploadService">
+			<ref local="fileUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteUploadAction" class="com.xiaoluo.action.DeleteUploadAction" scope="prototype">
+		<property name="fileUploadService">
+			<ref local="fileUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="downloadAction" class="com.xiaoluo.action.DownloadAction" scope="prototype">
+		<property name="fileUploadService">
+			<ref local="fileUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="userLoginAction" class="com.xiaoluo.action.UserLoginAction" scope="prototype">
+		<property name="authorityService">
+			<ref local="authorityService"/>
+		</property>
+	</bean>
+	
+	<bean id="createImageAction" class="com.xiaoluo.action.CreateImageAction" scope="prototype">
+	</bean>
+	
+	<bean id="loginValidateAction" class="com.xiaoluo.action.LoginValidateAction" scope="prototype">
+		<property name="authorityService">
+			<ref local="authorityService"/>
+		</property>
+	</bean>
+	
+	<bean id="userShowUploadAction" class="com.xiaoluo.action.UserShowUploadAction" scope="prototype">
+		<property name="fileUploadService">
+			<ref local="fileUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="listAuthorityAction" class="com.xiaoluo.action.ListAuthorityAction" scope="prototype">
+		<property name="authorityService">
+			<ref local="authorityService"/>
+		</property>
+	</bean>
+	
+	<bean id="getSingleRegisterUserAction" class="com.xiaoluo.action.GetSingleRegisterUserAction" scope="prototype">
+		<property name="authorityService">
+			<ref local="authorityService"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteRegisterUserAction" class="com.xiaoluo.action.DeleteRegisterUserAction" scope="prototype">
+		<property name="authorityService">
+			<ref local="authorityService"/>
+		</property>
+	</bean>
+
+	<bean id="userUploadAction" class="com.xiaoluo.action.UserUploadAction">
+		<property name="authorityService">
+			<ref local="authorityService"/>
+		</property>		
+	</bean>
+	
+	<bean id="listUserUploadAction" class="com.xiaoluo.action.ListUserUploadAction">
+		<property name="userUploadService">
+			<ref local="userUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="auditUserUploadAction" class="com.xiaoluo.action.AuditUserUploadAction">
+		<property name="userUploadService">
+			<ref local="userUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="updateUserUploadAction" class="com.xiaoluo.action.UpdateUserUploadAction">
+		<property name="userUploadService">
+			<ref local="userUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="downloadUserUploadAction" class="com.xiaoluo.action.DownloadUserUploadAction">
+		<property name="userUploadService">
+			<ref local="userUploadService"/>
+		</property>
+	</bean>
+	
+	<bean id="deleteUserUploadAction" class="com.xiaoluo.action.DeleteUserUploadAction">
+		<property name="userUploadService">
+			<ref local="userUploadService"/>
+		</property>
+	</bean>
+</beans>
