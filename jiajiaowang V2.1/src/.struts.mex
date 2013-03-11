@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="jiajiaowang" location="0,0" size="0,0">
+    <action name="createImageAction" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="teacherLoginAction" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="signup2-1.jsp" />
+      </result>
+    </action>
+    <action name="teacherLoginAction2" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="signup3.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="signin.jsp" />
+      </result>
+    </action>
+    <action name="teacherLoginAction3" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="signup_ok.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="signin.jsp" />
+      </result>
+    </action>
+    <action name="loginValidateAction" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="login_ok.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="signin.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="signin.jsp" />
+      </result>
+    </action>
+    <action name="changeCityInfoAction" location="0,0" size="0,0" />
+    <action name="changeTownInfoAction" location="0,0" size="0,0" />
+  </package>
+  <webResource name="adminManager.jsp" path="/adminManager.jsp" location="0,0" size="0,0" />
+  <webResource name="adminLogin.jsp" path="/adminLogin.jsp" location="0,0" size="0,0" />
+  <webResource name="signup2-1.jsp" path="/public/signup2-1.jsp" location="0,0" size="0,0" />
+  <webResource name="signup3.jsp" path="/public/signup3.jsp" location="0,0" size="0,0" />
+  <webResource name="signin.jsp" path="/public/signin.jsp" location="0,0" size="0,0" />
+  <webResource name="signup_ok.jsp" path="/public/signup_ok.jsp" location="0,0" size="0,0" />
+  <webResource name="login_ok.jsp" path="/public/login_ok.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

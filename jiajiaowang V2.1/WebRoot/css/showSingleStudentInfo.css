@@ -1,0 +1,208 @@
+html, body {
+    background: url("/jiajiaowang/images/body_bg_02.jpg") repeat-x scroll 0 0 #94B8D0;
+    color: #666666;
+    font-family: "ËÎÌו",Arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.container {
+    background: url("/jiajiaowang/images/cbg2.png") repeat-y scroll left top transparent;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    width: 1002px;
+}
+
+#main {
+    clear: both;
+    padding: 10px;
+    width: 982px;
+    margin: 0 auto;
+}
+
+#box_left {
+    display: inline;
+    float: left;
+    width: 720px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.LBtopNav {
+    float: left;
+    width: 670px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+.LBtopNav span {
+    margin: 0 5px;
+}
+
+.LBtopElect {
+    color: #FF8505;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.xue_bg {
+    background: url("/jiajiaowang/images/student_bg.jpg") no-repeat scroll 0 0 transparent;
+    clear: both;
+    color: #3C3C3C;
+    height: 97px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    width: 720px;
+}
+
+.xue_bg h1 {
+    font-size: 14px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.xue_bg p {
+    line-height: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.xue_sm {
+    line-height: 20px;
+    padding: 15px 40px 0;
+    text-indent: 2em;
+}
+
+.pleaseTtile {
+    background: url("/jiajiaowang/images/please_title_left.jpg") no-repeat scroll left top #E7F3E1;
+    color: #3B1004;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 30px;
+    width: 610px;
+}
+
+.pleaseTtileRight {
+    background: url("/jiajiaowang/images/please_title_right.jpg") no-repeat scroll right center #E7F3E1;
+    color: #3B1004;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    width: 80px;
+}
+
+.xue_table {
+    color: #3C3C3C;
+    font-style: normal;
+}
+
+.plInfoTable {
+	font-size: 12px;
+    float: left;
+    margin-bottom: 10px;
+    width: 720px;
+}
+
+.plInfoTable tr {
+    height: 35px;
+}
+
+.xue_lv {
+    background-color: #F1F8E4;
+    line-height: 20px;
+}
+
+.plInfoTable td {
+    border: 1px solid #FFFFFF;
+    padding: 3px;
+}
+
+.xue_qi {
+    background-color: #F7FAF2;
+    line-height: 20px;
+}
+
+.newplApply {
+    background: url("/jiajiaowang/images/student_lbg.jpg") repeat-x scroll 0 0 transparent;
+    border: 2px solid #C7E1ED;
+    color: #3C3C3C;
+    float: left;
+    font-size: 14px;
+    height: 70px;
+    margin: 0 0 10px;
+    padding: 10px;
+    width: 690px;
+}
+
+.newpl_shen {
+    margin: 0 auto;
+    width: 670px;
+}
+
+.newplApply h1 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.plInfoApply_btn {
+    background: url("/jiajiaowang/images/plInfoApply_btn.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    height: 45px;
+    line-height: 45px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 122px;
+}
+
+#box_right {
+    display: inline;
+    float: right;
+    width: 252px;
+    margin-top: 25px;
+}
+
+.pleaseExp {
+    background: url("/jiajiaowang/images/please_exp_top.jpg") no-repeat scroll left top #D0EEBA;
+    float: left;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 252px;
+}
+
+.pleaseExpCon {
+    float: left;
+    line-height: 18px;
+    padding: 0 10px;
+    width: 232px;
+}
+
+.pleaseExpCon h1 {
+    color: #3B1004;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pleaseExpBot {
+    background: url("/jiajiaowang/images/please_exp_bot.jpg") no-repeat scroll left bottom transparent;
+    float: left;
+    height: 10px;
+    width: 252px;
+}

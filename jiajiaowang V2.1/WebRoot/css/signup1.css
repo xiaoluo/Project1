@@ -1,0 +1,171 @@
+html, body {
+    background: url("../images/body_bg_02.jpg") repeat-x scroll 0 0 #94B8D0;
+    color: #666666;
+    font-family: "ËÎÌו",Arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.container {
+    background: url("/jiajiaowang/images/cbg2.png") repeat-y scroll left top transparent;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    width: 1002px;
+}
+
+#head {
+    background: url("/jiajiaowang/images/sone_01.jpg") no-repeat scroll 0 0 transparent;
+    height: 150px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.headLogo {
+    float: left;
+    padding: 1px 0 0 22px;
+    width: 980px;
+}
+
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+.headLogo img {
+    padding-top: 20px;
+}
+
+.headLogin {
+    float: right;
+    height: 90px;
+    margin-right: 15px;
+}
+
+.headLogin ul {
+    float: right;
+    padding: 0 0 0 15px;
+    text-align: right;
+}
+
+#main {
+    margin-bottom: 30px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.RTGbg h1 {
+    color: #474A41;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.RTGbg span {
+    color: #56971F;
+    font-size: 16px;
+}
+
+.RTGcon {
+    background-image: url("/jiajiaowang/images/sone_08.jpg");
+    background-repeat: repeat-x;
+    border: 1px solid #8ED24A;
+    color: #555555;
+    float: left;
+    line-height: 20px;
+    width: 710px;
+}
+
+.RTGbg {
+    float: left;
+    margin: 0 12px 12px;
+    padding-top: 15px;
+    width: 695px;
+}
+
+.zhuc {
+    line-height: 25px;
+    float: inherit;
+    font-size: 12px;
+    height: 340px;
+}
+
+.next {
+    background-image: url("/jiajiaowang/images/sone_12.jpg");
+    border: medium none;
+    height: 33px;
+    width: 120px;
+}
+
+input {
+    border: 1px solid #CCCCCC;
+    height: 18px;
+    vertical-align: middle;
+}
+
+#box_right {
+	background-image: url("/jiajiaowang/images/sone_08.jpg");
+    display: inline;
+    float: right;
+    height: 320px;
+    margin-right: 20px;
+    width: 266px;
+}
+
+.YTright {
+    background-image: url("/jiajiaowang/images/tsign_03.jpg");
+    background-repeat: no-repeat;
+    float: left;
+    height: 230px;;
+    margin-bottom: 10px;
+    width: 255px;
+}
+
+.YTright p {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.one {
+    line-height: 90px;
+}
+
+.two {
+    line-height: 8px;
+}
+
+.three {
+    line-height: 86px;
+}
+
+.dlright {
+    background-image: url("/jiajiaowang/images/login_17.jpg");
+    background-repeat: no-repeat;
+    clear: both;
+    height: 95px;
+    width: 255px;
+}
+
+
+.dlright p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.dlright a {
+    color: #63AD00;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.dlright a:hover {
+    color: #FF8505;
+    text-decoration: underline;
+}

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/jiajiaowang</value>
+		</property>
+		
+		<property name="username">
+			<value>root</value>
+		</property>
+		
+		<property name="password">
+			<value>123</value>
+		</property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource"/>
+		</property>
+		
+		<property name="mappingResources">
+			<list>
+				<value>com/xiaoluo/bean/Province.hbm.xml</value>
+				<value>com/xiaoluo/bean/City.hbm.xml</value>
+				<value>com/xiaoluo/bean/Town.hbm.xml</value>
+				<value>com/xiaoluo/bean/Teacher.hbm.xml</value>
+				<value>com/xiaoluo/bean/TeacherCourse.hbm.xml</value>
+				<value>com/xiaoluo/bean/Subject.hbm.xml</value>
+				<value>com/xiaoluo/bean/Course.hbm.xml</value>
+				<value>com/xiaoluo/bean/StudentOrder.hbm.xml</value>
+				<value>com/xiaoluo/bean/University.hbm.xml</value>
+			</list>
+		</property>
+		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<!-- dao类的bean -->
+	<bean id="provinceDAO" class="com.xiaoluo.dao.impl.ProvinceDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="cityDAO" class="com.xiaoluo.dao.impl.CityDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="townDAO" class="com.xiaoluo.dao.impl.TownDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="universityDAO" class="com.xiaoluo.dao.impl.UniversityDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherDAO" class="com.xiaoluo.dao.impl.TeacherDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="subjectDAO" class="com.xiaoluo.dao.impl.SubjectDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="courseDAO" class="com.xiaoluo.dao.impl.CourseDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="studentOrderDAO" class="com.xiaoluo.dao.impl.StudentOrderDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<!-- serviceTarget类的bean -->
+	<bean id="provinceServiceTarget" class="com.xiaoluo.service.impl.ProvinceServiceImpl">
+		<property name="provinceDAO">
+			<ref local="provinceDAO"/>
+		</property>
+	</bean>	
+	
+	<bean id="cityServiceTarget" class="com.xiaoluo.service.impl.CityServiceImpl">
+		<property name="cityDAO">
+			<ref local="cityDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="townServiceTarget" class="com.xiaoluo.service.impl.TownServiceImpl">
+		<property name="townDAO">
+			<ref local="townDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="universityServiceTarget" class="com.xiaoluo.service.impl.UniversityServiceImpl">
+		<property name="universityDAO">
+			<ref local="universityDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherServiceTarget" class="com.xiaoluo.service.impl.TeacherServiceImpl">
+		<property name="teacherDAO">
+			<ref local="teacherDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="subjectServiceTarget" class="com.xiaoluo.service.impl.SubjectServiceImpl">
+		<property name="subjectDAO">
+			<ref local="subjectDAO"/>
+		</property>
+	</bean>	
+	
+	<bean id="courseServiceTarget" class="com.xiaoluo.service.impl.CourseServiceImpl">
+		<property name="courseDAO">
+			<ref local="courseDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="studentOrderServiceTarget" class="com.xiaoluo.service.impl.StudentOrderServiceImpl">
+		<property name="studentOrderDAO">
+			<ref local="studentOrderDAO"/>
+		</property>
+	</bean>
+	
+	<!-- service类的bean -->
+	
+	<bean id="provinceService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="provinceServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="cityService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="cityServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="townService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="townServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="universityService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="universityServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="teacherService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="teacherServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="subjectService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="subjectServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="courseService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="courseServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<bean id="studentOrderService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="target">
+			<ref local="studentOrderServiceTarget"/>
+		</property>
+		
+		<property name="transactionManager">
+			<ref local="transactionManager"/>
+		</property>
+		
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>	
+		</property>
+	</bean>
+	
+	<!-- action类的bean -->
+	<bean id="createImageAction" class="com.xiaoluo.action.CreateImageAction" scope="prototype"></bean>
+	
+	<bean id="teacherLoginAction" class="com.xiaoluo.action.TeacherLoginAction" scope="prototype">
+		<property name="provinceService">
+			<ref local="provinceService"/>
+		</property>
+		<property name="cityService">
+			<ref local="cityService"/>
+		</property>
+		<property name="teacherService">
+			<ref local="teacherService"/>
+		</property>
+		<property name="townService">
+			<ref local="townService"/>
+		</property>
+		<property name="universityService">
+			<ref local="universityService"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherLoginAction2" class="com.xiaoluo.action.TeacherLoginAction2" scope="prototype">
+		<property name="provinceService">
+			<ref local="provinceService"/>
+		</property>
+		<property name="cityService">
+			<ref local="cityService"/>
+		</property>
+		<property name="townService">
+			<ref local="townService"/>
+		</property>
+		<property name="universityService">
+			<ref local="universityService"/>
+		</property>
+		<property name="teacherService">
+			<ref local="teacherService"/>
+		</property>
+		<property name="courseService">
+			<ref local="courseService"/>
+		</property>
+	</bean>
+	
+	<bean id="teacherLoginAction3" class="com.xiaoluo.action.TeacherLoginAction3" scope="prototype">
+		<property name="teacherService">
+			<ref local="teacherService"/>
+		</property>
+	</bean>
+	
+	<bean id="loginValidateAction" class="com.xiaoluo.action.LoginValidateAction" scope="prototype">
+		<property name="teacherService">
+			<ref local="teacherService"/>
+		</property>
+	</bean>
+	
+	<bean id="studentOrderValidateAction" class="com.xiaoluo.action.StudentOrderValidateAction" scope="prototype">
+		<property name="studentOrderService">
+			<ref local="studentOrderService"/>
+		</property>
+	</bean>
+	
+	<bean id="changeCityInfoAction" class="com.xiaoluo.action.ChangeCityInfoAction" scope="prototype">
+		<property name="cityService">
+			<ref local="cityService"/>
+		</property>
+		
+		<property name="universityService">
+			<ref local="universityService"/>
+		</property>
+	</bean>
+	
+	<bean id="changeTownInfoAction" class="com.xiaoluo.action.ChangeTownInfoAction" scope="prototype">
+		<property name="townService">
+			<ref local="townService"/>
+		</property>
+	</bean>
+	
+</beans>

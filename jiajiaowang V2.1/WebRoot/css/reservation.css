@@ -1,0 +1,205 @@
+html, body {
+    background: url("/jiajiaowang/images/body_bg_02.jpg") repeat-x scroll 0 0 #94B8D0;
+    color: #666666;
+    font-family: "ËÎÌו",Arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.container {
+    background: url("/jiajiaowang/images/cbg2.png") repeat-y scroll left top transparent;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    width: 1002px;
+}
+
+#main {
+	font-size: 12px;
+    clear: both;
+    padding: 10px;
+    width: 982px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#box_left {
+	font-size: 12px;
+    display: inline;
+    float: left;
+    width: 720px;
+}
+
+.LBtopNav {
+    float: left;
+    width: 670px;
+}
+
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+.LBtopNav span {
+    margin: 0 5px;
+}
+
+.LBtopElect {
+    color: #FF8505;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Jb-top {
+    background: url("/jiajiaowang/images/bg-top.jpg") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 10px;
+}
+
+.Jb-center {
+    background: none repeat scroll 0 0 #F9F9F9;
+    color: #333333;
+    float: left;
+    line-height: 20px;
+    width: 720px;
+}
+
+table{
+	font-size: 12px;
+}
+
+element.style {
+    margin-right: 5px;
+}
+.please_btn {
+    background: url("/jiajiaowang/images/btn-bg.jpg") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 115px;
+}
+input {
+    border: 1px solid #CCCCCC;
+    height: 18px;
+    vertical-align: middle;
+}
+
+#box_right {
+    display: inline;
+    float: right;
+    width: 252px;
+}
+
+.pleaseExp {
+    background: url("/jiajiaowang/images/please_exp_top.jpg") no-repeat scroll left top #D0EEBA;
+    float: left;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 252px;
+}
+
+.pleaseExpCon {
+    float: left;
+    line-height: 18px;
+    padding: 0 10px;
+    width: 232px;
+}
+
+.pleaseExpBot {
+    background: url("/jiajiaowang/images/please_exp_bot.jpg") no-repeat scroll left bottom transparent;
+    float: left;
+    height: 10px;
+    width: 252px;
+}
+
+.pleaseService, .pleaseHelp {
+    background: url("/jiajiaowang/images/please_service_top.jpg") no-repeat scroll left top #F6F6EA;
+    float: left;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 252px;
+}
+
+.pleaseServiceCon, .pleaseHelpCon {
+    border-left: 1px solid #D8D8B0;
+    border-right: 1px solid #D8D8B0;
+    float: left;
+    padding: 0 10px;
+    width: 230px;
+}
+
+.pleaseServiceCon h1, .pleaseHelpCon h1 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #3B1004;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    width: 230px;
+}
+
+.pleaseServiceCon ul, .pleaseHelpCon ul {
+    float: left;
+    line-height: 20px;
+    padding: 0;
+    width: 230px;
+}
+
+.pleaseServiceCon li, .pleaseHelpCon li {
+    list-style-type: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 230px;
+}
+
+.pleaseServiceBot, .pleaseHelpBot {
+    background: url("/jiajiaowang/images/please_service_bot.jpg") no-repeat scroll left bottom transparent;
+    float: left;
+    height: 10px;
+    width: 252px;
+}
+
+.line1 {
+    background: url("/jiajiaowang/images/line1.jpg") no-repeat scroll 0 0 transparent;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 45px;
+}
+
+.line2 {
+    background: url("/jiajiaowang/images/line2.jpg") no-repeat scroll 0 0 transparent;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 45px;
+}
+
+.line3 {
+    background: url("/jiajiaowang/images/line3.jpg") no-repeat scroll 0 0 transparent;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 45px;
+}
+
+.errorMessage li{
+	list-style-type: none;
+}

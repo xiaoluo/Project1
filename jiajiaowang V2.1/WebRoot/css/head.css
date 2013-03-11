@@ -1,0 +1,128 @@
+#headnew {
+    background: url("/jiajiaowang/images/newtop_bg_03.jpg") no-repeat scroll 0 0 transparent;
+    height: 125px;
+    margin: 0 auto;
+    width: 1002px;
+}
+
+.headLogonew {
+    margin: 0 auto;
+    width: 990px;
+}
+
+.headLogonew img {
+    float: left;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+#newstation {
+    color: #000000;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 50px;
+    width: auto;
+}
+
+.newstation_img {
+    background: url("/jiajiaowang/images/newtopszh.jpg") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 14px;
+    margin-top: 30px;
+    width: 13px;
+}
+
+.newtopslip {
+    color: #000000;
+    float: left;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 240px;
+}
+.newtop_middle {
+    margin-top: 10px;
+}
+
+.newtopcity, .newtop_middle {
+    float: left;
+    width: 240px;
+}
+
+.headLogonew ul, .headLogonew li {
+    list-style-type: none;
+}
+
+.newtop_right {
+    float: left;
+    line-height: 15px;
+    width: 505px;
+}
+
+.newphone {
+    color: #000000;
+    font-family: "ËÎÌå";
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 100px;
+    text-align: center;
+}
+
+.new_lc {
+    color: #FF8300;
+    font-family: "ºÚÌå";
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-left: 100px;
+}
+
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+.newnav {
+    clear: both;
+    margin: 0 auto;
+    padding-left: 2px;
+    padding-top: 13px;
+    width: 990px;
+}
+
+#newnavfirst {
+    background: url("/jiajiaowang/images/newnavtop.jpg") no-repeat scroll 0 0 transparent;
+    height: 30px;
+    width: 11px;
+}
+
+.newnav li {
+    background: url("/jiajiaowang/images/newnavtoplink.jpg") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: "ËÎÌå";
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    width: 98px;
+}
+
+.newnav #dangqian {
+    background: url("/jiajiaowang/images/newnavtophover.jpg") no-repeat scroll 0 0 transparent;
+    color: #737272;
+}
+
+.newnav a {
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    width: 98px;
+}
+
+.newnav a:hover {
+    background: url("/jiajiaowang/images/newnavtophover.jpg") no-repeat scroll 0 0 transparent;
+    color: #737272;
+    text-decoration: none;
+}

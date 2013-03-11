@@ -1,0 +1,156 @@
+html, body {
+    background: url("../images/body_bg_02.jpg") repeat-x scroll 0 0 #94B8D0;
+    color: #666666;
+    font-family: "ËÎÌå",Arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.container {
+    background: url("/jiajiaowang/images/cbg2.png") repeat-y scroll left top transparent;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    width: 1002px;
+}
+
+#head {
+    background: url("/jiajiaowang/images/sone_01.jpg") no-repeat scroll 0 0 transparent;
+    height: 150px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.headLogo {
+    float: left;
+    padding: 1px 0 0 22px;
+    width: 980px;
+}
+
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+.headLogo img {
+    padding-top: 20px;
+}
+
+.headLogin {
+    float: right;
+    height: 90px;
+    margin-right: 15px;
+}
+
+.headLogin ul {
+    float: right;
+    padding: 0 0 0 15px;
+    text-align: right;
+}
+
+
+#main {
+    clear: both;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.RCGcon {
+    background-image: url("/jiajiaowang/images/sone_08.jpg");
+    background-repeat: repeat-x;
+    border: 1px solid #8ED24A;
+    color: #555555;
+    float: left;
+    width: 980px;
+}
+
+#cheng_tb {
+    border: medium none;
+    float: left;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.RCGcon td {
+    border: medium none;
+    line-height: 30px;
+}
+
+.cheng_td {
+    text-align: right;
+}
+
+.RCGcon h1 {
+    color: #169B02;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+
+.RCGcon td {
+    border: medium none;
+    line-height: 30px;
+}
+
+.cheng_sh, .cheng_ch {
+    font-size: 14px;
+    text-align: center;
+}
+
+.cheng_ch {
+    font-size: 12px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.RCGcon a {
+    color: #159A00;
+    text-decoration: underline;
+}
+
+.renz {
+    background-image: url("/jiajiaowang/images/csign_06.jpg");
+    background-repeat: no-repeat;
+    float: right;
+    height: 215px;
+    margin: 40px 10px 10px 0;
+    width: 225px;
+}
+
+.jiaoy {
+    background-image: url("/jiajiaowang/images/sci_03.jpg");
+    background-repeat: no-repeat;
+    border: medium none;
+    height: 75px;
+    margin-top: 30px;
+    width: 165px;
+}
+
+.jiaoy ul, .jiaoy li {
+    color: #63AD00;
+    font-size: 16px;
+    font-weight: bold;
+    list-style-type: none;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#ms {
+    color: #FF8501;
+    font-family: "ºÚÌå";
+    font-size: 20px;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+.zhaoj {
+    display: inline;
+    line-height: 25px;
+}

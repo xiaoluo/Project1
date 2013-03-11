@@ -1,0 +1,133 @@
+html, body {
+    background: url("/jiajiaowang/images/body_bg_02.jpg") repeat-x scroll 0 0 #94B8D0;
+    color: #666666;
+    font-family: "ËÎÌå",Arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.container {
+    background: url("/jiajiaowang/images/cbg2.png") repeat-y scroll left top transparent;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    width: 1002px;
+}
+
+.sh_login {
+	margin: 0 auto;
+    color: #444444;
+    float: inherit;
+    margin-bottom: 5px;
+    padding: 1px 1px 2px;
+    width: 1002px;;;
+}
+
+
+.sh_loginTitle {
+    background: url("/jiajiaowang/images/sh_loginBg.gif") repeat-x scroll left top transparent;
+    float: left;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 25px;
+    padding-left: 10px;
+    width: 460px;
+}
+
+.sh_login table {
+	background: url("/jiajiaowang/images/newtop_bg_03.jpg") repeat-x scroll left top transparent;
+	color: #444444;
+    line-height: 28px;
+    width: 470px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+.sh_login a {
+	color: #1C547E;
+    text-decoration: none;
+}
+
+.sh_login a:hover {
+	color: #FF8505;
+	text-decoration: underline;
+}
+
+.sh_loginBut {
+    background: url("/jiajiaowang/images/xinlogin.jpg") no-repeat scroll left top transparent;
+    border: medium none;
+    cursor: pointer;
+    float: left;
+    height: 21px;
+    margin: 3px 2px 0 0;
+    width: 55px;
+}
+
+input {
+    border: 1px solid #CCCCCC;
+    height: 18px;
+    vertical-align: middle;
+}
+
+a:hover {
+	color: #FF8505;
+	text-decoration: underline;
+}
+
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+.sh_newrighttop1 {
+    height: 149px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    float: inherit;
+    padding: 1px 1px 2px;
+    width: 1002px;
+    margin-top: 2px;
+}
+
+.sh_newplease {
+    background: url("/jiajiaowang/images/indext_ask.jpg") no-repeat scroll left top transparent;
+    float: right;
+    height: 100px;
+    width: 245px;
+    margin: 0 auto;
+}
+
+.sh_newplease ul, .sh_newmake ul, .sh_newmark li, .sh_newplease li {
+    list-style-type: none;
+}
+
+.sh_newmark li, .sh_newplease li {
+    padding-top: 5px;
+}
+
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+.sh_newmake {
+    background: url("/jiajiaowang/images/sh_mark_30.jpg") no-repeat scroll left top transparent;
+    height: 98px;
+    width: 245px;
+    margin: 0 auto;
+    float: right;
+}
+
+.sh_pleaseTitle {
+    color: #3D7F07;
+    float: left;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 90px;
+}

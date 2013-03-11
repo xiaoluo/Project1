@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<package name="jiajiaowang" extends="struts-default">
+	
+		<action name="createImageAction" class="createImageAction">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="teacherLoginAction" class="teacherLoginAction">
+			<result name="success">/public/signup2-1.jsp</result>
+		</action>	
+		
+		<action name="teacherLoginAction2" class="teacherLoginAction2">
+			<result name="success">/public/signup3.jsp</result>
+			<result name="error" type="redirect">/public/signin.jsp</result>
+		</action>
+		
+		<action name="teacherLoginAction3" class="teacherLoginAction3">
+			<result name="success" type="redirect">/public/signup_ok.jsp</result>
+			<result name="error" type="redirect">/public/signin.jsp</result>
+		</action>
+		
+		<action name="loginValidateAction" class="loginValidateAction">
+			<result name="success">/public/login_ok.jsp</result>
+			<result name="error">/public/signin.jsp</result>
+			<result name="input">/public/signin.jsp</result>
+		</action>
+		
+		<action name="studentOrderValidateAction" class="studentOrderValidateAction">
+			<result name="success" type="redirect">/public/reservation.jsp</result>
+			<result name="input">/public/reservation.jsp</result>
+		</action>
+		
+		<action name="changeCityInfoAction" class="changeCityInfoAction"></action>
+			
+		<action name="changeTownInfoAction" class="changeTownInfoAction"></action>
+	</package>
+	
+</struts>

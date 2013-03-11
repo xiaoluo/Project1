@@ -1,0 +1,32 @@
+#foot {
+    background: url("/jiajiaowang/images/foot_bg.jpg") repeat-x scroll center bottom transparent;
+    border-top: 1px solid #DDDDDD;
+    clear: both;
+    padding-bottom: 10px;
+    text-align: center;
+    height: 125px;
+    margin: 0 auto;
+    width: 1002px;
+}
+
+.footTop {
+	background: url("/jiajiaowang/images/foot_bg.jpg") repeat-x scroll center bottom transparent;
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 10px 10px 10px;
+    color: #666666;
+}
+
+.footBottom {
+    color: #666666;
+    margin: 0 auto;
+}
+
+.footTop a {
+    padding-right: 10px;
+}
+
+.newbottomlink {
+    padding: 10px;
+    text-align: center;
+}

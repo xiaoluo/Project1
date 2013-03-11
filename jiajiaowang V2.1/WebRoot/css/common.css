@@ -1,0 +1,21 @@
+a {
+    color: #1C547E;
+    text-decoration: none;
+}
+
+a:hover{
+	color: #FF8505;
+	text-decoration: underline;
+}
+
+html, body {
+    color: #666666;
+    font-family: "ËÎÌו",Arial,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
